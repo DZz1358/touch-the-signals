@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit, } from '@angular/core';
+import { Component, effect, inject, } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
 import { CurrencyPipe } from '@angular/common';
 
@@ -8,15 +8,12 @@ import { CurrencyPipe } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   readonly products = (inject(ProductsService).fetchProducts());
 
   constructor() {
     effect(() => {
       console.log('products', this.products());
     });
-  }
-
-  ngOnInit(): void {
   }
 }
