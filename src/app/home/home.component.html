@@ -1,0 +1,31 @@
+<div>
+  <div class="product-card-container">
+    @for (product of products(); track product) {
+    <div class="product-card">
+      <img
+        class="product-image"
+        src="{{ product.image }}"
+        alt="{{ product.title }}"
+      />
+
+      <div class="product-info">
+        <h2 class="product-title">
+          {{ product.title }}
+        </h2>
+        <p class="product-category">{{ product.title }}</p>
+        <p class="product-description">
+          {{ product.description }}
+        </p>
+
+        <div class="product-bottom">
+          <span class="product-price">{{ product.price | currency }}</span>
+          <div class="product-rating">
+            ⭐ {{ product.rating.rate }}
+            <span class="rating-count"> ({{ product.rating.count }})</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
