@@ -1,6 +1,5 @@
 import { inject, Injectable, Signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 
